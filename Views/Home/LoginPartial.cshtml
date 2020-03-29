@@ -1,0 +1,19 @@
+@model LoginUser
+
+    <form asp-action="Login" controller="Home" method="post">
+        <h2>Login</h2>
+        <div class="error_box">
+            <span class="validation_error" asp-validation-for="UserEmail"></span>
+            <span class="validation_error" asp-validation-for="UserPassword"></span>
+        </div>
+        <div class="InputSection" data-placeholder="Email Address: ">
+            <input type="text" class="EmailInput" asp-for="UserEmail">
+        </div>
+
+        <div class="InputSection" data-placeholder="Password: ">
+            <input type="password" class="PasswordInput" asp-for="UserPassword">
+        </div>
+
+        <input type="submit" value="Login" id="submit">
+
+    </form>

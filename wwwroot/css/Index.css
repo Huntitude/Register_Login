@@ -1,0 +1,119 @@
+
+body {
+  font-family: sans-serif;
+  font-size: 10px
+}
+.container 
+{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+form 
+{
+    width: 500px;
+    min-width: 375px;
+    background: #fff;
+    padding: 20px 10px;
+    margin: 50px;
+    box-shadow: 0 0 1em #222;
+    border-radius: 15px;
+}
+.InputSection
+{
+    position: relative;
+}
+
+.InputSection::after
+{
+    position: absolute;
+    left: 5px;
+    top: 11px;
+    content: attr(data-placeholder);
+    pointer-events: none;
+    opacity: 0.6;
+    font-size: 2em;
+    padding-left: 5px;
+
+}
+input.FirstNameInput,
+input.LastNameInput
+{
+    padding: 10px 0 10px 120px;
+}
+input.EmailInput
+{
+    padding: 10px 0 10px 150px;
+}
+input.PasswordInput
+{
+    padding: 10px 0 10px 110px;
+}
+input.ConfirmPasswordInput
+{
+    padding: 10px 0 10px 185px;
+}
+form h2 
+{
+    margin:0 0 20px 0;
+    padding:10px;
+    text-align:center;
+    font-size:30px;
+    color:darken(#e5e5e5, 50%);
+    border-bottom:solid 1px #e5e5e5;
+}
+form input 
+{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    margin:0;
+}
+input[type="text"],
+input[type="password"] {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    font-size: 2em;
+    border-radius: 10px;
+    margin: 15px 0;
+    transition: ease-in-out .5s;
+}
+input[type="text"]:focus,
+input[type="password"]:focus 
+{
+    border-color: rgb(0, 155, 172);
+}
+input 
+{
+    margin: 20px 0;
+}
+form span.validation_error
+{
+    display:block;
+    padding: 2px 5px;
+    color: rgb(255, 108, 108);
+    font-size: 15px;
+}
+input[type="submit"] 
+{
+    box-shadow: 0 3px 0 0 darken(10%);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color:#0093c4;
+    cursor: pointer;
+    display: block;
+    font-size: 2em;
+    line-height: 1.6em;
+    margin: 2em 0 0;
+    outline: none;
+    padding: .8em 0;
+    text-shadow: 0 1px rgb(2, 112, 191);
+}
+input[type="submit"]:hover 
+{
+    background-color: #00a6dd;
+}

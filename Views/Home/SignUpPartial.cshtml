@@ -1,0 +1,34 @@
+@model NewUser
+
+<form asp-action="SignUp" controller="Home" post="post">
+        <h2>Sign Up</h2>
+        <div class="error_box">
+            <span class="validation_error" asp-validation-for="FirstName"></span>
+            <span class="validation_error" asp-validation-for="LastName"></span>
+            <span class="validation_error" asp-validation-for="Email"></span>
+            <span class="validation_error" asp-validation-for="Password"></span>
+            <span class="validation_error" asp-validation-for="ConfirmPassword"></span>
+        </div>
+
+        <div class="InputSection" data-placeholder="First Name: ">
+            <input type="text" class="FirstNameInput" asp-for="FirstName">
+        </div>
+
+        <div class="InputSection" data-placeholder="Last Name: ">
+            <input type="text" class="LastNameInput" asp-for="LastName">
+        </div>
+
+        <div class="InputSection" data-placeholder="Email Address: ">
+            <input type="text" class="EmailInput" asp-for="Email">
+        </div>
+
+        <div class="InputSection" data-placeholder="Password: ">
+            <input type="password" class="PasswordInput" asp-for="Password">
+        </div>
+
+        <div class="InputSection" data-placeholder="Confirm Password: ">
+            <input type="password" class="ConfirmPasswordInput" asp-for="ConfirmPassword">
+        </div>
+
+        <input type="submit" value="Create My Account" id="submit">
+    </form>
